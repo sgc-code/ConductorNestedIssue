@@ -1,0 +1,24 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+repositories {
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+}
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.example.cnvci.conductornestedissue"
+        minSdkVersion 22
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    def conductorVersion = '2.1.6-SNAPSHOT'
+    implementation "com.bluelinelabs:conductor:$conductorVersion"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+}
